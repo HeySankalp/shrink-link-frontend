@@ -1,37 +1,135 @@
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+  padding: 0px 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.imgCon {
+  color: #4595e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 75px;
+  height: 75px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-right: 5px solid #4595e3;
+  padding-right: 20px;
+  margin-right: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input {
+  font-size: larger;
+  border: none;
+  padding: 10px 20px;
+  outline-style: none;
+  border-radius: 50px;
+}
+
+.form {
+  display: flex;
+  border: none;
+  margin: 50px 0px;
+  border-bottom: 5px solid #4595e3;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.input:hover {
+  border-color: black;
+}
+
+button {
+  padding: 5px 20px;
+  border: 2px solid #4595e3;
+  background-color: transparent;
+  color: #4595e3;
+  font-size: large;
+  border-radius: 20px;
+  margin: 5px 5px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #4595e2;
+  color: white;
+}
+
+.outputTitleSec {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: larger;
+}
+
+.shrinked {
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 0px 20px grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 200px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.copyIco {
+  position: absolute;
+  font-size: 25px;
+  top: 10px;
+  padding: 3px 8px;
+  border-radius: 100%;
+  right: 10px;
+  z-index:5;
 }
 
-@keyframes App-logo-spin {
+.copyIco:active{
+  background-color: #958c8c57;
+}
+
+.copyIco:hover {
+  color: #4595e3
+}
+
+.loadingSec {
+  gap: 5px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invalidpage {
+  padding: 10px;
+  height: 85vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #82b8ee;
+  justify-content: center;
+  align-items: center;
+}
+
+.gear {
+  animation: rotation 2s infinite linear
+}
+
+
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
